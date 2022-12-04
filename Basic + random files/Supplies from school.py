@@ -1,0 +1,6 @@
+broi_paket_himikali=int(input())
+broi_paket_markeri=int(input())
+litri_preparat=int(input())
+prozent_namalenie=int(input())
+neobhodimi_pari=(broi_paket_himikali*5.8+broi_paket_markeri*7.2+litri_preparat*1.2)*(1-prozent_namalenie/100)
+print(neobhodimi_pari)
