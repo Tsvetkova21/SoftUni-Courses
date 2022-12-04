@@ -1,0 +1,10 @@
+price_mackerel=float(input())
+price_toy=float(input())
+bonito_kg=float(input())
+scad_kg=float(input())
+mussel_kg=int(input())
+bonito=price_mackerel*1.6*bonito_kg
+scad=price_toy*1.8*scad_kg
+mussel=mussel_kg*7.5
+all_price=bonito+scad+mussel
+print(f'{all_price:.2f}')
