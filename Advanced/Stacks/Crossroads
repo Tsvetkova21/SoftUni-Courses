@@ -1,0 +1,37 @@
+from collections import deque
+green_light_duration = int(input())
+free_window = int(input())
+cars = deque()
+command = input()
+time_left = free_window
+time_to_pass = 0
+passed_cars = 0
+while command != "END":
+    if command != "green":
+        cars.append(command)
+    else:
+        time_left = green_light_duration
+        for items in cars.copy():
+            passing_car = cars.popleft()
+            time_to_pass = len(passing_car)
+            if time_left + free_window< time_to_pass:
+                print("A crash happened!")
+                letter=time_left -free_window
+                print(f"{passing_car} was hit at {passing_car[letter]}.")
+                quit()
+            else:
+
+                if time_left>time_to_pass:
+                    time_left = time_left - time_to_pass
+                    passed_cars +=1
+                elif time_left + free_window>= time_to_pass:
+                    passed_cars += 1
+                    break
+
+                elif time_left<time_to_pass:
+                    cars.append(passing_car)
+
+    command = input()
+
+print("Everyone is safe.")
+print(f"{passed_cars} total cars passed the crossroads.")
