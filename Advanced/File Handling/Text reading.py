@@ -1,0 +1,6 @@
+file = open("text.txt")
+print(file.readline(5))
+print(file.readline(5))
+print(file.readline(5))
+print(file.readline())
+print(file.readline(5))

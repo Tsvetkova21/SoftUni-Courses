@@ -1,0 +1,5 @@
+file = open("asd.txt")
+print(file.read(2))
+print(file.read(2))
+print(file.read(2))
+print(file.read())
